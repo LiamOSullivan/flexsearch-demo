@@ -3,12 +3,34 @@
     encode: 'advanced',
     tokenize: 'reverse',
     suggest: true,
-    cache: true
+    cache: true,
+    depth: 3,
+    doc: {
+      id: 'id',
+      field: 'content'
+    }
   })
 
-  for (let i = 0; i < data.length; i++) {
-    index.add(i, data[i])
-  }
+  // const index1 = new FlexSearch({
+  //   encode: 'advanced',
+  //   tokenize: 'reverse',
+  //   suggest: true,
+  //   cache: true,
+  //   depth: 3,
+  //   doc: {
+  //     id: 'id',
+  //     field: 'content'
+  //   }
+  // })
+
+  // for (let i = 0; i < docs.length; i++) {
+  //   index.add(i, docs[i])
+  // }
+  index.add(docs)
+  console.log('index:\n')
+  console.log(index)
+  // console.log('index1:\n')
+  // console.log(index1)
 
   const suggestions = document.getElementById('suggestions')
   const autocomplete = document.getElementById('autocomplete')
@@ -20,9 +42,11 @@
 
   function showResults () {
     const value = this.value
-    const results = index.search(value, 25)
+    const results = index.search(value, 5)
+    console.log('res: \n')
+    console.log(results)
     let entry
-    const childs = suggestions.childNodes
+    let childs = suggestions.childNodes
     let i = 0
     const len = results.length
 
@@ -32,15 +56,17 @@
       if (!entry) {
         entry = document.createElement('div')
         suggestions.appendChild(entry)
+        console.log('append')
       }
-      entry.textContent = data[results[i]]
+      entry.textContent = results[i].content
+      console.log(results[i])
     }
 
     while (childs.length > len) {
       suggestions.removeChild(childs[i])
     }
 
-    const firstResult = data[results[0]]
+    const firstResult = docs[results[0]]
     const match = firstResult && firstResult.toLowerCase().indexOf(value.toLowerCase())
 
     if (firstResult && (match !== -1)) {
