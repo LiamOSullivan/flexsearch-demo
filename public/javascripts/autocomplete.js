@@ -11,24 +11,13 @@
     }
   })
 
-  // const index1 = new FlexSearch({
-  //   encode: 'advanced',
-  //   tokenize: 'reverse',
-  //   suggest: true,
-  //   cache: true,
-  //   depth: 3,
-  //   doc: {
-  //     id: 'id',
-  //     field: 'content'
-  //   }
-  // })
-
   // for (let i = 0; i < docs.length; i++) {
-  //   index.add(i, docs[i])
+  //   index.add(i, docs[i]) //this doesn't appear to work???
   // }
+
   index.add(docs)
-  console.log('index:\n')
-  console.log(index)
+  // console.log('index:\n')
+  // console.log(index)
   // console.log('index1:\n')
   // console.log(index1)
 
@@ -56,29 +45,30 @@
       if (!entry) {
         entry = document.createElement('div')
         suggestions.appendChild(entry)
-        console.log('append')
       }
       entry.textContent = results[i].content
-      console.log(results[i])
+      // console.log(results[i])
     }
 
     while (childs.length > len) {
       suggestions.removeChild(childs[i])
     }
 
-    const firstResult = docs[results[0]]
-    const match = firstResult && firstResult.toLowerCase().indexOf(value.toLowerCase())
-
-    if (firstResult && (match !== -1)) {
-      autocomplete.value = value + firstResult.substring(match + value.length)
-      autocomplete.current = firstResult
-    } else {
-      autocomplete.value = autocomplete.current = value
-    }
+  //   const firstResult = results[0].content
+  //   const match = firstResult && firstResult.toLowerCase().indexOf(value.toLowerCase())
+  //
+  //   if (firstResult && (match !== -1)) {
+  //     autocomplete.value = value + firstResult.substring(match + value.length)
+  //     autocomplete.current = firstResult
+  //   } else {
+  //     autocomplete.value = autocomplete.current = value
+  //   }
   }
 
   function acceptAutocomplete (event) {
     if ((event || window.event).keyCode === 13) {
+      console.log('acceptAutocomplete ')
+      console.log(event)
       this.value = autocomplete.value = autocomplete.current
     }
   }
