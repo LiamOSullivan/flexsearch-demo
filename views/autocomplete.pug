@@ -1,0 +1,21 @@
+extends layout
+
+block append head
+
+block content
+  h1 flexsearch autocomplete example
+  <table>
+  <input type="text" id="autocomplete">
+    <tr>
+      <td style="position: relative">
+        <input type="text" id="userinput" placeholder="Search by movie title ...">
+      </td>
+    </tr>
+    
+  </table>
+  <div id="suggestions"></div>
+
+  scripts    
+    script(src='lib/flexsearch.compact.js')
+    script(src='data/movies.js')
+    script(src='javascripts/autocomplete.js')
