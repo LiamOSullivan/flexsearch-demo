@@ -1,5 +1,5 @@
-function autocomp () {
-  let index = new FlexSearch({
+(function autocomp () {
+  const index = new FlexSearch({
     encode: 'advanced',
     tokenize: 'reverse',
     suggest: true,
@@ -10,19 +10,21 @@ function autocomp () {
     index.add(i, data[i])
   }
 
-  let suggestions = document.getElementById('suggestions')
-  let autocomplete = document.getElementById('autocomplete')
-  let userinput = document.getElementById('userinput')
+  const suggestions = document.getElementById('suggestions')
+  const autocomplete = document.getElementById('autocomplete')
+  const userinput = document.getElementById('userinput')
 
-  userinput.addEventListener('input', show_results, true)
-  userinput.addEventListener('keyup', accept_autocomplete, true)
-  suggestions.addEventListener('click', accept_suggestion, true)
+  userinput.addEventListener('input', showResults, true)
+  userinput.addEventListener('keyup', acceptAutocomplete, true)
+  suggestions.addEventListener('click', acceptSuggestion, true)
 
-  function show_results () {
-    let value = this.value
-    let results = index.search(value, 25)
-    let entry, childs = suggestions.childNodes
-    let i = 0, len = results.length
+  function showResults () {
+    const value = this.value
+    const results = index.search(value, 25)
+    let entry
+    const childs = suggestions.childNodes
+    let i = 0
+    const len = results.length
 
     for (; i < len; i++) {
       entry = childs[i]
@@ -31,7 +33,6 @@ function autocomp () {
         entry = document.createElement('div')
         suggestions.appendChild(entry)
       }
-
       entry.textContent = data[results[i]]
     }
 
@@ -39,25 +40,25 @@ function autocomp () {
       suggestions.removeChild(childs[i])
     }
 
-    let first_result = data[results[0]]
-    let match = first_result && first_result.toLowerCase().indexOf(value.toLowerCase())
+    const firstResult = data[results[0]]
+    const match = firstResult && firstResult.toLowerCase().indexOf(value.toLowerCase())
 
-    if (first_result && (match !== -1)) {
-      autocomplete.value = value + first_result.substring(match + value.length)
-      autocomplete.current = first_result
+    if (firstResult && (match !== -1)) {
+      autocomplete.value = value + firstResult.substring(match + value.length)
+      autocomplete.current = firstResult
     } else {
       autocomplete.value = autocomplete.current = value
     }
   }
 
-  function accept_autocomplete (event) {
+  function acceptAutocomplete (event) {
     if ((event || window.event).keyCode === 13) {
       this.value = autocomplete.value = autocomplete.current
     }
   }
 
-  function accept_suggestion (event) {
-    let target = (event || window.event).target
+  function acceptSuggestion (event) {
+    const target = (event || window.event).target
 
     userinput.value = autocomplete.value = target.textContent
 
@@ -67,6 +68,4 @@ function autocomp () {
 
     return false
   }
-}
-
-autocomp()
+}())
