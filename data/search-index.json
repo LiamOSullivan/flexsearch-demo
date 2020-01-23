@@ -6,7 +6,7 @@
 	"link": "/themes#transport-header"
 }, {
 	"id": 1,
-	"type": "themes-chart",
+	"type": "themes-chart-component",
 	"title": "Dublin Bikes",
 	"subtitle": "",
 	"content": "Just Eat dublinbikes is a self-service bike rental system open to everyone from 14 years of age. It enables you to travel through the city centre, commute between home and work and get out and about to enjoy Dublin city at your leisure. Visit the Dublin Bikes website for more information.",
@@ -34,7 +34,7 @@
 	"link": "/themes#environment-monitoring"
 }, {
 	"id": 5,
-	"type": "themes-chart",
+	"type": "themes-chart-component",
 	"title": "Water Monitoring Sites",
 	"subtitle": "",
 	"content": "Two sources, the Office of Public Works (OPW) and the Environmental Protection Agency (EPA), monitor water levels and flows along Dublin’s rivers, canals, and coastline. Use the buttons to switch between the OPW water level monitoring sites and the EPA Hydronet system sites. Click a map icon to get information for that location.",
@@ -48,18 +48,18 @@
 	"link": "/themes#waste-management"
 }, {
 	"id": 7,
-	"type": "themes-chart",
+	"type": "themes-chart-component",
 	"title": "Waste Produced per Capita",
 	"subtitle": "",
 	"content": "The EPA tracks the amount of waste collected from “black bins” locally throughout Ireland. It is reported as waste production per capita, taking into account the number of people who live in each local authority. Each of the four local authorities’ waste production per capita are plotted over time, with per-person waste across Dublin decreasing since a relative high in 2008-2009.",
 	"link": "/themes#waste-per-capita"
 }, {
 	"id": 8,
-	"type": "themes-chart",
+	"type": "themes-chart-component",
 	"title": "Household Recycling Rate-Dry Recyclables",
 	"subtitle": "",
 	"content": "The EPA records the amount of dry recyclables produced in green bins in localities throughout Ireland. Recycling statistics are reported as recycling rate, which is the percentage of all waste produced (see the Waste Production Per Capita graph for total waste production) which is recycled. Recycled waste is either used in energy recovery or mechanical treatment for repurposing. Dun-Laoghaire Rathdown is consistently the highest-recycling of the four local authorities.",
-	"link": "themes/#household-recycling-rate-dry"
+	"link": "/themes#household-recycling-rate-dry"
 }, {
 	"id": 9,
 	"type": "",
@@ -76,25 +76,25 @@
 	"link": "/themes#water-management"
 }, {
 	"id": 11,
-	"type": "themes-chart",
+	"type": "themes-chart-component",
 	"title": "Annual Water Consumption per Capita",
 	"subtitle": "",
 	"content": "Water consumption depends on the total population in Dublin, so it is reported per capita. Over the past several years, Dublin’s water consumption per capita has remained very constant at around <i>(coming soon)</i> litres per person per year.",
-	"link": "themes/#annual-water-consumption-per-capita"
+	"link": "/themes#annual-water-consumption-per-capita"
 }, {
 	"id": 12,
-	"type": "themes-chart",
+	"type": "themes-chart-component",
 	"title": "Eastern River Basin District Water Quality Trends",
 	"subtitle": "",
 	"content": "Ireland’s natural water quality is measured regionally. The Eastern River Basin District encompasses the Dublin watershed and surrounding areas. Surveys of the water quality along riverways are measured in periods of three years and with five classifications of quality – high, good, moderate, poor, and bad – based on concentrations or potentially harmful chemicals and macroinvertebrate communities.",
-	"link": "themes/#eastern-river-basin"
+	"link": "/themes#eastern-river-basin"
 }, {
 	"id": 13,
 	"type": "themes-sub-header",
 	"title": "Environmental Awareness Statistics",
 	"subtitle": "",
 	"content": "The following two charts display initiatives tracking the engagement of public entities – Dublin schools and Local Agenda 21 which promotes and funds various local projects – with healthy environmental practices.",
-	"link": "themes/#environmental-awareness"
+	"link": "/themes#environmental-awareness"
 }, {
 	"id": 14,
 	"type": "",
@@ -104,51 +104,114 @@
 	"link": "/themes#green-flag-schools"
 }, {
 	"id": 15,
-	"type": "themes-chart",
+	"type": "themes-chart-component",
 	"title": "Number of Local Agenda 21 Funded Projects",
 	"subtitle": "",
 	"content": "The Local Agenda 21 Environmental Partnership Fund is an environmental awareness initiative meant to provide finding for local and other small scale projects which aim to improve environmental quality and sustainability from the ground up. Tallied at the local authority level, the number of Agenda 21 projects have generally increased over the years, with Dublin City hosting more funded projects than the other local authorities in the most recent data.",
-	"link": "themes/#local-agenda-21"
+	"link": "/themes#local-agenda-21"
 }, {
-	"id": null,
-	"type": "",
+	"id": 16,
+	"type": "themes-header",
+	"title": "Housing",
+	"subtitle": "",
+	"content": "The housing data highlights the distribution of residential properties throughout Dublin and seeks to highlight the current housing supply and affordability. For more information on housing please click on this link <a href='../stories'> Housing Stories </a> ",
+	"link": "/themes#housing"
+}, {
+	"id": 17,
+	"type": "themes-sub-header",
+	"title": "Residential Costs",
+	"subtitle": "",
+	"content": "",
+	"link": "/themes#residential-costs"
+}, {
+	"id": 18,
+	"type": "themes-chart-component",
+	"title": "Monthly Rent Prices for Private Dwellings",
+	"subtitle": "",
+	"content": "The <strong>Average Rents Dataset</strong> contains average rents being paid for particular time periods for five different categories of dwelling types in 446 locations throughout the country. The dataset is useful for checking the actual rent being paid for, say, a semi-detached house or a two-bed apartment in an area. However, average rent changes if the mix of properties rented changes, therefore there is a need to mix–adjust to get a standardised rent. The <strong>Standardised Rent</strong> (see the <a href='https://onestopshop.rtb.ie/research/ar' target='blank'>Rent Index</a> for more details) is a mix-adjusted rent i.e. a measure of rents that takes account of the changing mix of properties rented in different time periods. The key point of the standardised index is that it takes into account the changing mix of properties rented in different time periods, whereas the average rents on their own do not.",
+	"link": "#monthly-rent-prices-private"
+}, {
+	"id": 19,
+	"type": "themes-chart",
+	"title": "Monthly rent for a property in Dublin",
+	"subtitle": "",
+	"content": "",
+	"link": "/themes#chart-rentPrices"
+}, {
+	"id": 20,
+	"type": "themes-chart",
+	"title": "Monthly rent by number of rooms in Dublin",
+	"subtitle": "",
+	"content": "",
+	"link": "/themes#chart-rentByBeds"
+}, {
+	"id": 21,
+	"type": "themes-chart-component",
+	"title": "Average House Prices",
+	"subtitle": "",
+	"content": "Average house prices are derived from data supplied by the mortgage lending agencies on all loans approved by them. In comparing house prices figures from one period to another, account should be taken of the fact that changes in the mix of dwellings will affect the average figures. This chart shows the trend for the average house price across the fournDublin local authorities for each quarter since the beginning of 2008.",
+	"link": "/themes#average-house-prices"
+}, {
+	"id": 22,
+	"type": "themes-chart-component",
+	"title": "Monthly Residential Property Price Index",
+	"subtitle": "",
+	"content": "In Dublin, residential property prices rose by 6.3% in the year 2018 to October, with house prices rising by 6.6% and apartments by 5.7%.The highest house price growth in Dublin was in Dún Laoghaire-Rathdown at 8.2%, while the lowest growth was in South Dublin at 5.0%. National residential property prices in Ireland excluding Dublin were 10.6% higher in the year to October, with house prices up by 10.3% and apartments by 14.5%. The region outside of Dublin that saw thelargest rise in property prices was the Mid-West at 21.5%, while thesmallest was recorded in the Mid-East at 8.3%.",
+	"link": "/themes#property-price-monthly"
+}, {
+	"id": 23,
+	"type": "themes-chart-component",
+	"title": "Planning and Completions Statistics",
+	"subtitle": "",
+	"content": "",
+	"link": "/themes#planning-completions"
+}, {
+	"id": 24,
+	"type": "themes-chart-component",
+	"title": "Monthly House Unit Completions",
+	"subtitle": "",
+	"content": "The principal data source for the New Dwellings Completions (NDC) is connections data provided to the CSO by ESB Network (ESBN). This information is collected on the ESBN form NC2 Single Domestic Dwelling or Farm Dwelling application for single dwellings and form NC1 Multi-Unit Development for scheme dwellings and apartments. The chart shows the unit completions for houses across the four Dublin local authorities since January 2014.",
+	"link": "/themes#unitscompmonth"
+}, {
+	"id": 25,
+	"type": "themes-chart-component",
+	"title": "Quarterly House Unit Completions",
+	"subtitle": "",
+	"content": "The chart shows the house unit completion data for each of the Dublin local authorities, categorised by type of dwelling as either private or social. The data spans from the first quarter of 2014 to the beginning of 2017.",
+	"link": "/themes#quarterly-house-unit-completions"
+}, {
+	"id": 26,
+	"type": "themes-chart-component",
+	"title": "Quarterly New Dwelling Completions in Dublin County by Type",
+	"subtitle": "",
+	"content": "The chart shows the house unit completion data for each of the Dublin local authorities, categorised by type of dwelling as: 1. apartment, 2. scheme home, or 3. single house. The data spans from the beginning of 2014 to the second quarter of 2018.",
+	"link": "/themes#quarterly-new-dwelling-completions"
+}, {
+	"id": 27,
+	"type": "themes-chart-component",
+	"title": "Planning Applications Dublin Local Authorities",
+	"subtitle": "",
+	"content": "Each planning authority processes planning applications for permission to build and/or renovate houses and other buildings. The outcome of the planning application process is provided as data on the numbers of: Invalid applications received. Applications for outline permission and full permission. Decisions to grant/refuse permission. Decisions issued within the statutory eight week period. Decisions deferred. Percentages for grants/refusals, decisions made within eight weeks and decisions deferred. The charts show the total applications received, decisions to grant and to refuse permission, and the appeals received for each year from 2009 to 2017, for each local authoirty. ",
+	"link": "/themes#planning-applications"
+}, {
+	"id": 28,
+	"type": "themes-chart-component",
+	"title": "Available Supply of Housing Land",
+	"subtitle": "",
+	"content": "The <b>2014 Residential Land Availability Survey</b> measured the total amount of lands that had at that time been development plans and that were the highest priority for development. In effect, these lands were the areas within which much, if not all, new urban housing in the state was expected to be provided in the five or six years following the survey completion. The area of such lands amounted to <b>17,434 hectares</b>, which gave a range of densities appropriate to whether the areas were in small villages or larger towns and cities and, as determined by the relevant local authorities, could theoretically enable the construction of over <b>414,000 dwellings</b>.",
+	"link": "/themes#available-housing-land"
+}, {
+	"id": 29,
+	"type": "themes-chart-component",
+	"title": "Annual Contributions to Councils from Developers",
+	"subtitle": "",
+	"content": "Since the introduction of development contribution schemes in 2000, they have assisted in the delivery of much needed investment in essential infrastructure in conjunction with central exchequer and local authority own resources.",
+	"link": "/themes#contributions-developers"
+}, {
+	"id": 999,
+	"type": "themes-chart-component",
 	"title": "",
 	"subtitle": "",
 	"content": "",
-	"link": ""
-}, {
-	"id": null,
-	"type": "",
-	"title": "",
-	"subtitle": "",
-	"content": "",
-	"link": ""
-}, {
-	"id": null,
-	"type": "",
-	"title": "",
-	"subtitle": "",
-	"content": "",
-	"link": ""
-}, {
-	"id": null,
-	"type": "",
-	"title": "",
-	"subtitle": "",
-	"content": "",
-	"link": ""
-}, {
-	"id": null,
-	"type": "",
-	"title": "",
-	"subtitle": "",
-	"content": "",
-	"link": ""
-}, {
-	"id": null,
-	"type": "",
-	"title": "",
-	"subtitle": "",
-	"content": "",
-	"link": ""
+	"link": "/themes"
 }]
