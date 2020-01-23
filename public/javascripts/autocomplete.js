@@ -7,7 +7,7 @@
     depth: 3,
     doc: {
       id: 'id',
-      field: 'content'
+      field: ['title', 'subtitle', 'content']
     }
   })
 
@@ -16,50 +16,45 @@
   // }
 
   fetch('/data/')
-  .then((response) => {
-    return response.json()
-  })
-  .then((data) => {
-    console.log('docs \n')
-    console.log(data)
-    index.add(data)
-      // console.log('index:\n')
-      // console.log(index)
-      // console.log('index1:\n')
-      // console.log(index1)
+    .then((response) => {
+      return response.json()
+    })
+    .then((data) => {
+      console.log('docs \n')
+      console.log(data)
+      index.add(data)
+      const suggestions = document.getElementById('suggestions')
+      const autocomplete = document.getElementById('autocomplete')
+      const userinput = document.getElementById('userinput')
 
-    const suggestions = document.getElementById('suggestions')
-    const autocomplete = document.getElementById('autocomplete')
-    const userinput = document.getElementById('userinput')
+      userinput.addEventListener('input', showResults, true)
+      userinput.addEventListener('keyup', acceptAutocomplete, true)
+      suggestions.addEventListener('click', acceptSuggestion, true)
 
-    userinput.addEventListener('input', showResults, true)
-    userinput.addEventListener('keyup', acceptAutocomplete, true)
-    suggestions.addEventListener('click', acceptSuggestion, true)
+      function showResults () {
+        const value = this.value
+        const results = index.search(value, 5)
+        console.log('results: \n')
+        console.log(results)
+        let entry
+        let childs = suggestions.childNodes
+        let i = 0
+        const len = results.length
 
-    function showResults () {
-      const value = this.value
-      const results = index.search(value, 5)
-      console.log('results: \n')
-      console.log(results)
-      let entry
-      let childs = suggestions.childNodes
-      let i = 0
-      const len = results.length
+        for (; i < len; i++) {
+          entry = childs[i]
 
-      for (; i < len; i++) {
-        entry = childs[i]
-
-        if (!entry) {
-          entry = document.createElement('div')
-          suggestions.appendChild(entry)
-        }
-        entry.textContent = results[i].content
+          if (!entry) {
+            entry = document.createElement('div')
+            suggestions.appendChild(entry)
+          }
+          entry.textContent = `${results[i].title}: ${results[i].link}`
           // console.log(results[i])
-      }
+        }
 
-      while (childs.length > len) {
-        suggestions.removeChild(childs[i])
-      }
+        while (childs.length > len) {
+          suggestions.removeChild(childs[i])
+        }
 
       //   const firstResult = results[0].content
       //   const match = firstResult && firstResult.toLowerCase().indexOf(value.toLowerCase())
@@ -70,26 +65,26 @@
       //   } else {
       //     autocomplete.value = autocomplete.current = value
       //   }
-    }
-
-    function acceptAutocomplete (event) {
-      if ((event || window.event).keyCode === 13) {
-        console.log('acceptAutocomplete ')
-        console.log(event)
-        this.value = autocomplete.value = autocomplete.current
-      }
-    }
-
-    function acceptSuggestion (event) {
-      const target = (event || window.event).target
-
-      userinput.value = autocomplete.value = target.textContent
-
-      while (suggestions.lastChild) {
-        suggestions.removeChild(suggestions.lastChild)
       }
 
-      return false
-    }
-  })
+      function acceptAutocomplete (event) {
+        if ((event || window.event).keyCode === 13) {
+          console.log('acceptAutocomplete ')
+          console.log(event)
+          this.value = autocomplete.value = autocomplete.current
+        }
+      }
+
+      function acceptSuggestion (event) {
+        const target = (event || window.event).target
+
+        userinput.value = autocomplete.value = target.textContent
+
+        while (suggestions.lastChild) {
+          suggestions.removeChild(suggestions.lastChild)
+        }
+
+        return false
+      }
+    })
 }())
