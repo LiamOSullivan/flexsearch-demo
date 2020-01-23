@@ -208,6 +208,62 @@
 	"content": "Since the introduction of development contribution schemes in 2000, they have assisted in the delivery of much needed investment in essential infrastructure in conjunction with central exchequer and local authority own resources.",
 	"link": "/themes#contributions-developers"
 }, {
+	"id": 30,
+	"type": "themes-sub-header",
+	"title": "Demographics",
+	"subtitle": "",
+	"content": "Statistical data relating to the population and particular groups within it.",
+	"link": "/themes#demographics"
+}, {
+	"id": 31,
+	"type": "themes-chart",
+	"title": "Population of Dublin",
+	"subtitle": "",
+	"content": "",
+	"link": "/themes#chart-population"
+}, {
+	"id": 32,
+	"type": "themes-chart",
+	"title": "Number of Households in Dublin",
+	"subtitle": "",
+	"content": "",
+	"link": "/themes#chart-households"
+}, {
+	"id": 33,
+	"type": "themes-chart",
+	"title": "Population Born Outside the State (Excluding N. Ireland)",
+	"subtitle": "",
+	"content": "",
+	"link": "/themes#chart-bornOutsideState"
+}, {
+	"id": 34,
+	"type": "themes-chart",
+	"title": "Private Permanent Households by Number of Persons",
+	"subtitle": "",
+	"content": "",
+	"link": "/themes#chart-householdComposition"
+}, {
+	"id": 35,
+	"type": "themes-sub-header",
+	"title": "Employment Statistics",
+	"subtitle": "",
+	"content": "",
+	"link": "/themes#employment"
+}, {
+	"id": 36,
+	"type": "themes-chart",
+	"title": "Numbers in Employment",
+	"subtitle": "",
+	"content": "",
+	"link": "/themes#chart-employment"
+}, {
+	"id": 37,
+	"type": "themes-chart",
+	"title": "Numbers Unemployed",
+	"subtitle": "",
+	"content": "",
+	"link": "/themes#chart-unemployment"
+}, {
 	"id": 999,
 	"type": "themes-chart-component",
 	"title": "",
