@@ -48,7 +48,7 @@
             entry = document.createElement('div')
             suggestions.appendChild(entry)
           }
-          entry.textContent = `${results[i].title}: ${results[i].link}`
+          entry.innerHTML = `<a href = '${results[i].link}'> ${results[i]['section-name']} ${results[i].title}</a>`
           // console.log(results[i])
         }
 
