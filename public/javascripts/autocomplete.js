@@ -33,7 +33,7 @@
 
       function showResults () {
         const value = this.value
-        const results = index.search(value, 5)
+        const results = index.search(value, 8)
         console.log('results: \n')
         console.log(results)
         let entry
